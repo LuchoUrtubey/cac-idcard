@@ -1,0 +1,131 @@
+/* font */
+@import url('https://fonts.googleapis.com/css2?family=Changa:wght@200;300;400;500;600;700;800&display=swap');
+
+/* Variables globales */
+:root {
+    --lightblue-primary: #00a0d6;
+    --lightgrey-bg: #f5f5f5;
+    --light-bg: #fafafa;
+}
+
+body {
+    min-height: 100vh;
+    margin: 0;
+    background-color: var(--light-bg);
+}
+
+/* Lugares donde aplica la font */
+nav,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Changa', sans-serif;
+}
+
+/* Título de pagina */
+.principal {
+    color: var(--lightblue-primary);
+    text-align: center;
+}
+
+/* Menú nav */
+.navmenu {
+    background-color: var(--lightgrey-bg);
+}
+
+/* Menú hamburguesa  */
+.menu-burguer {
+    background-color: var(--lightgrey-bg);
+    color: var(--lightblue-primary);
+}
+
+/* Menú hamburguesa color del borde al seleccionar */
+.navbar-toggler {
+    color: var(--lightblue-primary);
+}
+
+/* Footer */
+.footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 30px;
+    background-color: var(--lightgrey-bg);
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+}
+
+/* Footer centrado */
+.footer-content {
+    text-align: center;
+}
+
+/* Iconos redes sociales */
+.social-icon {
+    font-size: 24px;
+    color: var(--lightblue-primary);
+    margin-right: 10px;
+}
+
+/* Card  */
+.cardweb {
+    width: 574px;
+    border-top: 10px solid var(--lightblue-primary);
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.4);
+}
+
+/* Avatar de la card */
+.cardweb img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+/* Título de la card */
+h2.card-title {
+    margin-bottom: 0.1rem;
+    color: var(--lightblue-primary);
+    font-weight: bold;
+}
+
+/* Subtítulo de la card */
+h5.card-title {
+    font-style: italic;
+}
+
+/* Iconos de la card */
+.card-footer img {
+    height: 25px;
+    width: 25px;
+}
+
+/* estilos responsives */
+@media (max-width: 575.98px) {
+    .cardweb {
+        width: 382px;
+    }
+
+    /* Optimización del menú hamburguesa para que no haya conflicto con el contenido */
+    .navbar-collapse {
+        position: fixed;
+        top: 0;
+        left: -100%;
+        width: 100%;
+        max-width: 300px;
+        transition: left 0.2s ease-in-out;
+        background-color: var(--lightgrey-bg);
+        opacity: 0.95;
+        padding: 20px;
+        z-index: 999;
+    }
+
+    /* Animación del menú desde la izquierda */
+    .navbar-collapse.show {
+        left: 0;
+    }
+}
